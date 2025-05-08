@@ -1,0 +1,110 @@
+/* styles.css */
+:root {
+    --primary: #0069d9;
+    --primary-light: #e9f2ff;
+    --background: #f5f8fa;
+    --card-bg: #ffffff;
+    --border: #e1e8ed;
+    --text: #333333;
+    --radius: 8px;
+    --spacing: 1rem;
+    --shadow: rgba(0, 0, 0, 0.05);
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 900px;
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: calc(var(--spacing) * 2);
+    font-size: 2.5rem;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  
+  .input-group,
+  .med-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: calc(var(--spacing) * 1.2);
+    margin-bottom: calc(var(--spacing) * 1.5);
+    box-shadow: 0 1px 4px var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing);
+  }
+  
+  .med-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0,105,217,0.15);
+    outline: none;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing);
+    margin-top: var(--spacing);
+  }
+  
+  .buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+  }
+  
+  .buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  
+  #codeArea {
+    margin-top: calc(var(--spacing) * 2);
+    background: var(--card-bg);
+    padding: var(--spacing);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: monospace;
+    word-break: break-all;
+    box-shadow: 0 1px 4px var(--shadow);
+  }
+  

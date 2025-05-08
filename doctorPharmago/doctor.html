@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Interface Pharmago médecin</title>
+  <link rel="canonical" href="https://XenoMathic.github.io/PharmaGo-doctor/">
+  <meta name="description" content="Génération d'ordonnances et commandes Git intégrées pour le projet PharmaGo-doctor.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>📄 Ordonnance Pharmago</h1>
+
+  <div class="input-group">
+    <div>
+      <label for="patient">Nom du patient</label>
+      <input type="text" id="patient" placeholder="Jean Dupont">
+    </div>
+    <div>
+      <label for="passport">Numéro de passeport</label>
+      <input type="text" id="passport" placeholder="AB1234567">
+    </div>
+    <div>
+      <label for="ordDate">Date de l'ordonnance</label>
+      <input type="date" id="ordDate">
+    </div>
+    <div>
+      <label for="validity">Validité (jusqu'au)</label>
+      <input type="date" id="validity">
+    </div>
+    <div>
+      <label for="country">Pays de délivrance</label>
+      <select id="country"></select>
+    </div>
+    <div>
+      <label for="numMed">Nombre de médicaments</label>
+      <input type="number" id="numMed" min="1" max="5" value="1">
+    </div>
+  </div>
+
+  <div id="medSections"></div>
+
+  <div class="buttons">
+    <button id="gen">Générer le code</button>
+    <button id="copyBtn">Copier le code</button>
+  </div>
+
+  <div id="codeArea"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
